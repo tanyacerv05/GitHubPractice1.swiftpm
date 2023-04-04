@@ -6,7 +6,6 @@ struct ContentView: View {
     @State var numberTwo: Int = 0
     @State var answer: Int = 0
     
-    @State var answer: Int
     var body: some View {
         
         TextField("Enter Number", value: $numberOne, format: .number)
@@ -19,14 +18,17 @@ struct ContentView: View {
                 Text("Multiply")
             }
             Button {
+                answer = numberOne+numberTwo
             } label: {
                 Text("Add")
             }
             Button {
+                answer = numberOne-numberTwo
             } label: {
                 Text("Subtract")
             }
             Button {
+                answer = numberOne/numberTwo
             } label: {
                 Text("Divide")
             }
